@@ -5,6 +5,7 @@ if os.path.exists("env.py"):
 
 
 app = Flask(__name__)
+app.secret_key = os.environ.get("SECRET_KEY")
 
 
 @app.route("/")
@@ -30,10 +31,8 @@ def personaltrainer():
 @app.route("/contact", methods=["GET", "POST"])
 def contact():
     if request.method == "POST":
-        print(request.form.get("name"))
-        print(request.form["email"])
-        print(request.form["phone"])
-        print(request.form["message"])
+        flash("Thank you, we will get in touch shortly!".format(
+            request.form.get("name")))
     return render_template("contact.html")
 
 
