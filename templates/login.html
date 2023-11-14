@@ -33,31 +33,6 @@
             <div class="col-lg-6 mb-4">
                 <div class="card">
                     <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                        <img src="https://res.cloudinary.com/dbjnqkn07/image/upload/v1692358156/healthclub-pp4/pexels-victor-freitas-841130_ggalv1.jpg"
-                            class="img-fluid" />
-                        <a href="#!">
-                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                        </a>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Health Check</h5>
-                        <h6 class="post-subtitle">Did you know we also perform health check ups? 
-                            We do, we have 3 packages: 
-                            <br>Base - Medium - Total <br> 
-                            We can customize it to fit your needs.
-                            Contact us for more information.</h6>
-                            <br>
-                            <div class="text-center">
-                                <button type="submit" class="btn btn-primary" style="width: 30%" <a
-                                    href="{{ url_for('contact') }}">Contact</button>
-                            </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-6 mb-4">
-                <div class="card">
-                    <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                         <img src="https://res.cloudinary.com/dbjnqkn07/image/upload/v1692358155/healthclub-pp4/pexels-victor-freitas-703016_p5hqbj.jpg"
                             class="img-fluid" />
                         <a href="#!">
@@ -68,10 +43,10 @@
                         <h5 class="card-title">Log in</h5>
                         <form method="post">
                             
-                            <!-- Email input -->
+                            <!-- Username input -->
                             <div class="form-outline mb-4">
-                                <input type="email" name="email" id="form2Example1" class="form-control" />
-                                <label class="form-label" for="form2Example1">Email address</label>
+                                <input type="text" name="username" id="form2Example1" class="form-control" />
+                                <label class="form-label" for="form2Example1">Username</label>
                             </div>
 
                             <!-- Password input -->
@@ -82,8 +57,9 @@
 
                             <!-- Submit button -->
                             <div class="text-center">
-                                <button type="submit" class="btn btn-primary" style="width: 30%" <a
-                                    href="{{ url_for('login') }}">Log in</button>
+                                <button type="submit" class="btn btn-primary" style="width: 30%">
+                                    Log in
+                                </button>
                             </div>
                             <br>
                             <!-- Register buttons -->
@@ -94,4 +70,7 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+</main>
 {% endblock %}
