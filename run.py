@@ -1,5 +1,7 @@
 import os
-from flask import Flask, render_template
+from flask import Flask, render_template, request, flash
+if os.path.exists("env.py"):
+    import env
 
 
 app = Flask(__name__)
@@ -25,8 +27,13 @@ def personaltrainer():
     return render_template("personaltrainer.html")
 
 
-@app.route("/contact")
+@app.route("/contact", methods=["GET", "POST"])
 def contact():
+    if request.method == "POST":
+        print(request.form.get("name"))
+        print(request.form["email"])
+        print(request.form["phone"])
+        print(request.form["message"])
     return render_template("contact.html")
 
 
